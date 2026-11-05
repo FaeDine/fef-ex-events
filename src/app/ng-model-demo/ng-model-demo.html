@@ -3,16 +3,29 @@
 <!-- TODO (Part 1): Before any [(ngModel)] will compile, import FormsModule in app-module.ts -->
 
 <h3>Text</h3>
-<!-- TODO: text input bound to name, then <p>Hello {{name}}</p> -->
+<input type="text" [(ngModel)]="name">
+<p>Hello {{name}}</p>
 
 <h3>Checkbox</h3>
-<!-- TODO: checkbox bound to active, then <p>Active: {{active}}</p> -->
+<input type="checkbox" [(ngModel)]="active">
+<p>Active: {{active}}</p>
 
 <h3>Radio buttons</h3>
-<!-- TODO: two radios (male / female) bound to gender, then <p>{{gender}}</p> -->
+<input type="radio" [(ngModel)]="gender"
+    value="male"> Male
+<input type="radio" [(ngModel)]="gender"
+    value="female"> Female
+<p>{{gender}}</p>
 
 <h3>Range</h3>
-<!-- TODO: range input bound to myRange, then <p>{{myRange}}</p> -->
+<input type="range" [(ngModel)]="myRange">
+<p>{{myRange}}</p>
 
 <h3>Select</h3>
-<!-- TODO: select bound to make (volvo, saab, mercedes, audi), then <p>{{make}}</p> -->
+<select [(ngModel)]="carMake">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="mercedes">Mercedes</option>
+    <option value="audi">Audi</option>
+</select>
+<p>{{carMake}}</p>
